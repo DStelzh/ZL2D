@@ -43,7 +43,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: dfe3e6106227fc64aa22440dac5fcd5e, type: 3}
-    totalSpriteSurfaceArea: 3948107
+    totalSpriteSurfaceArea: 3949007
     bindAsDefault: 1
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
@@ -3514,6 +3514,7 @@ SpriteAtlas:
   - {fileID: -1102500664524883376, guid: 5843a8c7545368943b4f3d9188e661ff, type: 3}
   - {fileID: 1621380550929633379, guid: 5843a8c7545368943b4f3d9188e661ff, type: 3}
   - {fileID: 4152989954425285550, guid: 5843a8c7545368943b4f3d9188e661ff, type: 3}
+  - {fileID: 21300000, guid: 31a3c7f70ce174240a1b8023a598cfdf, type: 3}
   - {fileID: 6017112385137239488, guid: bbb8b5282d5d57f45bba283e92bc459f, type: 3}
   - {fileID: -3526953524615131289, guid: bbb8b5282d5d57f45bba283e92bc459f, type: 3}
   - {fileID: 4947710421274591398, guid: bbb8b5282d5d57f45bba283e92bc459f, type: 3}
@@ -8138,6 +8139,7 @@ SpriteAtlas:
   - townfolk1_f_11
   - townfolk1_f_10
   - townfolk1_f_0
+  - ProjectiveProjectile
   - atacks2_1
   - atacks2_0
   - atacks2_3

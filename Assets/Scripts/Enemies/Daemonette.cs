@@ -6,6 +6,7 @@ using UnityEngine.XR;
 public class Daemonette : Enemies
 {
     public Rigidbody2D myRigidbody; //rb component
+   
     [Header("Target Vars")]
     public Transform target; // our target for radius calc
     public float chaseRadius; // our float for our chaseradius
