@@ -6,10 +6,13 @@ using UnityEngine.XR;
 public class Daemonette : Enemies
 {
     public Rigidbody2D myRigidbody; //rb component
+    [Header("Target Vars")]
     public Transform target; // our target for radius calc
     public float chaseRadius; // our float for our chaseradius
     public float attackRadius; // -""- for our attak radius
     public Transform homePosition; //not used yet, but we are going to fill this out to where our mob should return
+
+    [Header("Animator")]
     public Animator anim; //reference to our naimator 
 
     // Start is called before the first frame update
@@ -41,7 +44,8 @@ public class Daemonette : Enemies
                 ChangeState(enemyStates.walk); // set our state to walk when we start walking
                 anim.SetBool("WakeUp", true); //when our player gets within our Radius and our mob wakes up, we are setting our Animator Parameter Bool Wake Up to true, to start our wakeup process
             }
-        } else
+        }
+        else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
         {
             anim.SetBool("WakeUp", false); //we set our bool to false if the player is outside the chase radius
         }
@@ -53,7 +57,7 @@ public class Daemonette : Enemies
         anim.SetFloat("moveX", direction.x); // when horizontal move x float
         anim.SetFloat("moveY", direction.y); // hen vertical move y float
     }
-    private void ChangeState(enemyStates newState) //our change state method
+    public void ChangeState(enemyStates newState) //our change state method
     {
         if(currentState != newState) //if the state isnt the one put in, we set it to the one we want
         {

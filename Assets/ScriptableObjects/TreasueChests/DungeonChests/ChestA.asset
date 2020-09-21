@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68df4fcc13b233442a75bb5f6820bf20, type: 3}
-  m_Name: PlayerInventory
+  m_Script: {fileID: 11500000, guid: 173e4a89093c4864f9da58727131a67c, type: 3}
+  m_Name: ChestA
   m_EditorClassIdentifier: 
-  currentItem: {fileID: 0}
-  items: []
-  numberOfKeys: 10
-  coins: 6970
+  initialValue: 0
+  RuntimeValue: 0
