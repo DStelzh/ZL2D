@@ -11,7 +11,7 @@ public class Daemonette : Enemies
     public Transform target; // our target for radius calc
     public float chaseRadius; // our float for our chaseradius
     public float attackRadius; // -""- for our attak radius
-    public Transform homePosition; //not used yet, but we are going to fill this out to where our mob should return
+    
 
     [Header("Animator")]
     public Animator anim; //reference to our naimator 
