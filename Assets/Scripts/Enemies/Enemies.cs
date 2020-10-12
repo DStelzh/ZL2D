@@ -14,15 +14,25 @@ public class Enemies : MonoBehaviour
     public string enemyName;
     public int baseAttack;
     public float moveSpeed;
+    public Vector2 homePosition;
 
     [Header("Death Effects")]
     public GameObject deathEffekt;
     public float deathWaitTime;
 
+    [Header("Enemysignals")]
+    public SignalSys roomSignal;
+
+
 
     private void Awake()
     {
         health = maxHealth.initialValue;
+    }
+
+    private void OnEnable()
+    {
+        transform.position = homePosition;
     }
 
     private void TakeDamage(float damage)
@@ -31,6 +41,7 @@ public class Enemies : MonoBehaviour
         if(health <= 0)
         {
             DeathEffekt();
+            roomSignal.Raise();
             this.gameObject.SetActive(false);
         }
     }

@@ -45,6 +45,10 @@ public class Door : Interactable
 
     public void Close()
     {
-
+        doorSprite.enabled = true;
+        // set bool in this script to trrue
+        isOpen = false;
+        // deactivate box collider of object 
+        doorBoxCollider.enabled = true;
     }
 }
