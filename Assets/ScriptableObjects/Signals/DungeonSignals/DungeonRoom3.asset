@@ -9,8 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 278c3a6a4c1b0db449cd8caacc75e993, type: 3}
-  m_Name: PlayerPosi
+  m_Script: {fileID: 11500000, guid: 74970214622f06d41a1e6b663eee872a, type: 3}
+  m_Name: DungeonRoom3
   m_EditorClassIdentifier: 
-  initialValue: {x: 3.16, y: 3.16}
-  defaultValue: {x: 3.16, y: 3.16}
+  listeners: []

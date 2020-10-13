@@ -2,13 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rooms : MonoBehaviour
+public class DungeonEnemyRoom : DungeonRooms
 {
-    public Enemies[] enemies;
-    public Pot[] pots;
-	public GameObject virtualCamera;
+	public Door[] doors;
 
-	public virtual void OnTriggerEnter2D(Collider2D other)
+	public void CheckEnemies()
+	{
+		for (int i = 0; i < enemies.Length; i++)
+		{
+			if (enemies[i].gameObject.activeInHierarchy && i < enemies.Length - 1) // enemies.Lenth-1 is substantial for the last enemies, as the check works until intended for the every enemy 2nd to lst
+			{
+				return;
+			}
+		}
+		OpenDoors();
+	}
+	public override void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.CompareTag("Player") && !other.isTrigger)
 		{
@@ -21,10 +30,11 @@ public class Rooms : MonoBehaviour
 			{
 				ChangeActivation(pots[i], true);
 			}
+			CloseDoors();
 			virtualCamera.SetActive(true);
 		}
 	}
-	public virtual void OnTriggerExit2D(Collider2D other)
+	public override void OnTriggerExit2D(Collider2D other)
 	{
 		if (other.CompareTag("Player") && !other.isTrigger)
 		{
@@ -40,9 +50,18 @@ public class Rooms : MonoBehaviour
 			virtualCamera.SetActive(false);
 		}
 	}
-
-	public void ChangeActivation(Component component, bool activation)
+	public void CloseDoors()
 	{
-		component.gameObject.SetActive(activation);
+		for (int i = 0; i < doors.Length; i++)
+		{
+			doors[i].Close();
+		}
+	}
+	public void OpenDoors()
+	{
+		for (int i = 0; i < doors.Length; i++)
+		{
+			doors[i].Open();
+		}
 	}
 }
