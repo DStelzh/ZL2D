@@ -20,6 +20,10 @@ public class Enemies : MonoBehaviour
     public GameObject deathEffekt;
     public float deathWaitTime;
 
+    [Header("Enemysignals")]
+    public SignalSys roomSignal;
+
+
 
     private void Awake()
     {
@@ -37,6 +41,7 @@ public class Enemies : MonoBehaviour
         if(health <= 0)
         {
             DeathEffekt();
+            roomSignal.Raise();
             this.gameObject.SetActive(false);
         }
     }
