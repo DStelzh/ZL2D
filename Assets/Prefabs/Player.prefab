@@ -251,6 +251,7 @@ GameObject:
   - component: {fileID: 4801900051376689809}
   - component: {fileID: 5719965478397199061}
   - component: {fileID: 5719965478397199063}
+  - component: {fileID: 5719965478583273986}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -315,7 +316,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -713262377
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 4
   m_Sprite: {fileID: -2444280945619779576, guid: 3720fb6b350223b448e80af3eb45e35d,
     type: 3}
@@ -395,6 +396,7 @@ MonoBehaviour:
   startingPosition: {fileID: 11400000, guid: 25a4bbe9cc06bb644b2841538cf8efe7, type: 2}
   playerInventory: {fileID: 11400000, guid: 958914bf23ed5df4aa98dc0519e123ff, type: 2}
   recievedItemSprite: {fileID: 5719965479939826777}
+  playerHit: {fileID: 11400000, guid: fc4a5582b83f9414a9c34f76945e4f70, type: 2}
 --- !u!95 &1605059561607703923
 Animator:
   serializedVersion: 3
@@ -481,6 +483,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   contextClue: {fileID: 5719965478648015997}
   contextActive: 0
+--- !u!114 &5719965478583273986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719965478397199060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd438dd108a0f284aa931a2da434f1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ImpulseDefinition:
+    m_ImpulseChannel: 1
+    m_RawSignal: {fileID: 11400000, guid: cd6af2f1a9c9b9f40aac1c1ebdf42820, type: 2}
+    m_AmplitudeGain: 1
+    m_FrequencyGain: 1
+    m_RepeatMode: 0
+    m_Randomize: 1
+    m_TimeEnvelope:
+      m_AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      m_AttackTime: 0
+      m_SustainTime: 0.2
+      m_DecayTime: 0.7
+      m_ScaleWithImpact: 1
+      m_HoldForever: 0
+    m_ImpactRadius: 100
+    m_DirectionMode: 0
+    m_DissipationMode: 2
+    m_DissipationDistance: 1000
+    m_PropagationSpeed: 343
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 512
+  m_IgnoreTag: 
+  m_UseImpactDirection: 0
+  m_ScaleImpactWithMass: 0
+  m_ScaleImpactWithSpeed: 0
 --- !u!1 &5719965478648015997
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +600,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -713262377
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 8387997009269029421, guid: 69b854426f7092141a45f2d3d55e764e,
     type: 3}
@@ -632,7 +683,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1350158315
-  m_SortingLayer: 1
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

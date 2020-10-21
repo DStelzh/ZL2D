@@ -31,8 +31,8 @@ public class RoomMove : MonoBehaviour
     {
         if (collisioninfo.CompareTag("Player") && !collisioninfo.isTrigger) //if the tag of the collider is "player" we run this function
         {
-            cam.minPos += camChange; // creating references in our script for unity to fill out. here we add our value where our next room begins to our min and max value so the script stays true for the upper room
-            cam.maxPos += camChange; 
+           // cam.minPos += camChange; // creating references in our script for unity to fill out. here we add our value where our next room begins to our min and max value so the script stays true for the upper room
+           // cam.maxPos += camChange; 
             collisioninfo.transform.position += playerChange;  // creating a reference to our player position and adding a value to set him into the next "room"
 
             if (needText) //if need text = true 
